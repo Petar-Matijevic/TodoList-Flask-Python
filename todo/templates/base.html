@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        table tr:hover td:nth-child(1),
+        table tr:hover td:nth-child(2) {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>To do list</h1>
+    <br>
+    <br>
+
+    <form action="/add" method="post">
+        <div>
+            <label>Enter the task</label>
+            <input type="text" name="name" >
+            <button type="submit">Add task</button>
+        </div>
+    </form>
+    <br><br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Task</th>
+                <th>Status</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for todo in todo_list%}
+            <tr>
+                <td>{{todo.task_id}}</td>
+                <td>{{todo.name}}</td>
+                {%if todo.done == False%}
+                <td><span class="badge badge-danger">Not Done</span></td>
+                {%else%}
+                <td><span class="badge badge-success">Done</span></td>
+                {%endif%}
+                <td><a href="/update/{{todo.task_id}}" class="btn btn-primary">Update</a></td>
+                <td><a href="/delete/{{todo.task_id}}" class="btn btn-danger">Delete</a></td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

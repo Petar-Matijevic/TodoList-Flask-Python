@@ -1,0 +1,220 @@
+body {
+  background: linear-gradient(to bottom right, #bdc3c7, #2c3e50, #bdc3c7);
+  background-image: url('https://i.imgur.com/XI53Qyr.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  animation: pulse 20s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #bdc3c7;
+  }
+  50% {
+    background-color: #2c3e50;
+  }
+  100% {
+    background-color: #bdc3c7;
+  }
+}
+
+
+
+
+h1 {
+color: #333;
+font-size: 36px;
+text-align: center;
+margin-bottom: 30px;
+}
+
+form {
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+margin-bottom: 30px;
+}
+
+form label {
+display: block;
+font-size: 20px;
+margin-bottom: 10px;
+color: #333;
+}
+
+form input[type="text"] {
+width: 100%;
+font-size: 20px;
+padding: 10px;
+border: none;
+border-radius: 5px;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+}
+
+form button[type="submit"] {
+    background: linear-gradient(to bottom, #c4c4c4, #a3a3a3);
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form button[type="submit"]:hover {
+    background: linear-gradient(to bottom, #d9d9d9, #b8b8b8);
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+background-color: #fff;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+}
+
+table th,
+table td {
+padding: 10px;
+text-align: left;
+border-bottom: 1px solid #f0f0f0;
+}
+
+table th {
+background-color: #333;
+color: #fff;
+}
+
+table tr:nth-child(even):hover {
+background-color: #f9f9f9;
+}
+
+form button.update-btn,
+a.delete-btn {
+font-size: 16px;
+padding: 8px 16px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+}
+
+form button.update-btn {
+background-color: #00bfff;
+color: #fff;
+}
+
+form button.update-btn:hover {
+background-color: #0080ff;
+}
+
+a.delete-btn {
+background-color: #ff4d4d;
+color: #fff;
+}
+
+a.delete-btn:hover {
+background-color: #e60000;
+}
+form button.update-btn[type="submit"] {
+    background-color: #0077cc;
+    color: #fff;
+}
+
+form button.update-btn[type="submit"]:hover {
+    background-color: #005ea6;
+}
+
+
+a.update-btn {
+background-color: #0077cc;
+color: #fff;
+font-size: 16px;
+padding: 8px 16px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+}
+
+a.update-btn:hover {
+background-color: #005ea6;
+}
+table td.status {
+    text-align: center;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+table td.status.not-done {
+    background-color: #ff4d4d;
+}
+
+table td.status.done {
+    background-color: #00bfff;
+}
+table td {
+    max-width: 300px;
+    word-wrap: break-word;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #333;
+  margin: 0 0 2rem;
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5), 3px 3px 0 rgba(247, 247, 247, 0.5);
+  background-image: linear-gradient(to right, #f8f8f8 50%, transparent 50%);
+  background-size: 200% 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+h1:hover {
+  background-position: -100% 0;
+  color: #fff;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5), 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+
+  /* New styles */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #0077cc;
+}
+table tr:hover td:nth-child(1),
+table tr:hover td:nth-child(2) {
+  background-color: #f5f5f5; /* change to your preferred background color */
+  color: #333; /* change to your preferred text color */
+}
